@@ -5,7 +5,7 @@
 // VS CLASS-BASED COMPONENTS
 
 import React from 'react';
-import { Button, FormControl, FormGroup, InputGroup, Glyphicon, Addon, Col, Row, Image } from 'react-bootstrap';
+import { Grid, Col, Row } from 'react-bootstrap';
 
 class Game extends React.Component {
     propagateToParent(e) {
@@ -15,10 +15,13 @@ class Game extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.props.gameName}
-                <i className="material-icons" onClick={this.propagateToParent.bind(this)}>star</i>
-            </div>
+            <Grid>
+                <Row className="show-grid">
+                    <Col Col xs={2} xsOffset={4}>{this.props.gameName}</Col>
+                    
+                    <Col Col xs={2}><i className="material-icons" onClick={this.propagateToParent.bind(this)}>star</i></Col>
+                </Row>
+            </Grid>
         )
     }
 }

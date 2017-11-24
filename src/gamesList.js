@@ -9,6 +9,7 @@ import Game from './game';
 
 //Data
 import * as data from './data';
+import { Grid, Col, Row } from 'react-bootstrap';
 
 class GamesList extends React.Component {
     constructor(props) {
@@ -28,14 +29,17 @@ class GamesList extends React.Component {
 
         return (
 
-            <div>
-                <label>This is child to parent communication</label>
-                <h1>Total votes: {this.state.totalVotes}</h1>
-                
+            <Grid>
+                <Row className="show-grid">
+                    <Col Col xs={4} xsOffset={4}><label>This is child to parent communication</label></Col>
+                </Row>
+                <Row className="show-grid">
+                    <Col Col xs={2} xsOffset={4}><h1>Total votes: {this.state.totalVotes}</h1></Col>
+                </Row>
                 {data.data.map((item) =>
                     <Game gameName={item.name} setParentState={this.upVote.bind(this)} />
                 )}
-            </div>);
+            </Grid>);
     }
 
 
