@@ -19,7 +19,7 @@ class Game extends React.Component {
                 <Row className="show-grid">
                     <Col Col xs={2} xsOffset={4}>{this.props.gameName}</Col>
                     
-                    <Col Col xs={2}><i className="material-icons" onClick={this.propagateToParent.bind(this)}>star</i></Col>
+                    <Col Col xs={2}><i className="material-icons star-icon" onClick={this.propagateToParent.bind(this)}>star</i></Col>
                 </Row>
             </Grid>
         )

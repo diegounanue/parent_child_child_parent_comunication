@@ -30,11 +30,11 @@ class GamesList extends React.Component {
         return (
 
             <Grid>
-                <Row className="show-grid">
-                    <Col Col xs={4} xsOffset={4}><label>This is child to parent communication</label></Col>
+                <Row className="show-grid page-title">
+                    <Col Col xs={8} xsOffset={2}><label>This is child to parent communication</label></Col>
                 </Row>
-                <Row className="show-grid">
-                    <Col Col xs={2} xsOffset={4}><h1>Total votes: {this.state.totalVotes}</h1></Col>
+                <Row className="show-grid page-title">
+                    <Col Col xs={8} xsOffset={2}><h1>Total votes: {this.state.totalVotes}</h1></Col>
                 </Row>
                 {data.data.map((item) =>
                     <Game gameName={item.name} setParentState={this.upVote.bind(this)} />

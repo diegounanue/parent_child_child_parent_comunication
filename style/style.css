@@ -1,0 +1,12 @@
+* {
+    font-size: 20px;    
+}
+
+.page-title {
+    text-align: center;
+}
+
+.star-icon{
+    color: yellowgreen;
+    cursor: pointer;
+}
